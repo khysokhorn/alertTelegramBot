@@ -6,7 +6,7 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 5
+      max-parallel: 5 
 
     steps:
       # - uses: actions/checkout@v3
@@ -36,6 +36,7 @@ jobs:
       #     pytest
       - name: Telegram Bot
         run: |
+          apt-get install dos2unix -y
+          dos2unix bot.sh
           chmod u+x bot.sh 
           bash bot.sh ${{ github.event.head_commit.message }}
-          
