@@ -40,6 +40,6 @@ jobs:
         run: |
           sudo apt-get install -y libxml2-utils
           sudo apt-get install dos2unix -y
-          suod dos2unix bot.sh
+          sudo dos2unix bot.sh
           sudo chmod u+x bot.sh 
           bash bot.sh ${{ github.event.head_commit.message }}
