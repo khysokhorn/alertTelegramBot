@@ -42,8 +42,8 @@ jobs:
           path: .github/workflows/bot.sh
       - name: Echo package.json
         run: |
-        ls -la
-
+          ls -la
+          
       - name: Telegram Bot
         working-directory: .
         run: |
