@@ -38,8 +38,4 @@ jobs:
 
       - name: Telegram Bot
         run: |
-          # sudo apt-get install -y libxml2-utils
-          # sudo apt-get install dos2unix -y
-          # sudo chmod u+x bot.sh 
-          # sudo dos2unix bot.sh
           bash bot.sh ${{ github.event.head_commit.message }}
