@@ -10,8 +10,6 @@ jobs:
       max-parallel: 5 
     steps:
       working-directory: .
-      run:|
-        ls -la
       # - uses: actions/checkout@v3
       # - name: Set up Python 3.10.5
       #   uses: actions/setup-python@v3
