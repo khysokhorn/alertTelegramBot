@@ -8,5 +8,7 @@ tele_url="https://api.telegram.org/bot${token}";
 echo $chat_id
 # curl -s "${tele_url}/sendMessage?chat_id=${chat_id}" \
 #   --data-urlencode "text=$1" | json_pp
-
+# git add .
+# git commit -m $1
+# git push origin master
 curl https://api.telegram.org/bot$token/sendMessage\?chat_id\=-1001508760330\&text\="$1"
