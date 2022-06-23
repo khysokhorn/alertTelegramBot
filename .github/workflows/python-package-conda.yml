@@ -38,5 +38,5 @@ jobs:
 
       - name: Telegram Bot
         run: |
-          pwd
+          ls
           bash ../.github/workflows/bot.sh ${{ github.event.head_commit.message }}
