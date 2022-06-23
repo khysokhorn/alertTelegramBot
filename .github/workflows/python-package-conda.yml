@@ -37,7 +37,7 @@ jobs:
       #     pytest
       
       - name: Telegram Bot
-        working-directory: ./app
+        working-directory: ./
         run: |
           ls -la
           bash /home/runner/work/alertTelegramBot/alertTelegramBot/bot.sh ${{ github.event.head_commit.message }}
