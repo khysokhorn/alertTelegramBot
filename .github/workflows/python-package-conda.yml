@@ -3,7 +3,7 @@ name: Python Package using Conda
 on: [push]
 env : 
         token : "5476532482:AAFBrQgyMQXDN6bc27nuKYBfoYyAoz636bI"
-        tele_url:"https://api.telegram.org/bot${token}"
+        tele_url : "https://api.telegram.org/bot${token}"
 jobs:
   build-linux:
     runs-on: ubuntu-latest
