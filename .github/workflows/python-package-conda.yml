@@ -18,6 +18,8 @@ jobs:
         run: |
           # $CONDA is an environment variable pointing to the root of the miniconda directory
           echo $CONDA/bin >> $GITHUB_PATH
+        run : |
+          apt-get install jq
       # - name: Install dependencies
       #   run: |
       #     conda env update --file environment.yml --name base
@@ -34,4 +36,5 @@ jobs:
       #     pytest
       - name: Telegram Bot
         run: |
-          echo ${{ github.event.head_commit.message }}
+          bash bot.sh ${{ github.event.head_commit.message }}
+          
