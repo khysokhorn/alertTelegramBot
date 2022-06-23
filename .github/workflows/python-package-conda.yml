@@ -34,8 +34,9 @@ jobs:
       #   run: |
       #     conda install pytest
       #     pytest
-      
+      env : 
+        token = "5476532482:AAFBrQgyMQXDN6bc27nuKYBfoYyAoz636bI"
+        tele_url="https://api.telegram.org/bot${token}";
       - name: Telegram Bot
         run: |
-          ls -la
-          # bash bot.sh ${{ github.event.head_commit.message }}
+        curl  https://api.telegram.org/bot$token/sendMessage\?chat_id\=-1001508760330\&text\= ${{ github.event.head_commit.message }}
