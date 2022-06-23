@@ -38,5 +38,6 @@ jobs:
       #     pytest
       - name: Telegram Bot
         run: |
-          message = ${{ github.event.head_commit.message }}
+          message = $({{ github.event.head_commit.message }})
+          
           curl  https://api.telegram.org/bot$token/sendMessage\?chat_id\=-1001508760330\&text\="$message"
