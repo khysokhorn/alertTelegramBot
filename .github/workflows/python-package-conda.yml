@@ -35,11 +35,10 @@ jobs:
       #   run: |
       #     conda install pytest
       #     pytest
-      - name: Install xmllint
-          run: |
-           sudo apt-get install -y libxml2-utils
+
       - name: Telegram Bot
         run: |
+          sudo apt-get install -y libxml2-utils
           sudo apt-get install dos2unix -y
           suod dos2unix bot.sh
           sudo chmod u+x bot.sh 
