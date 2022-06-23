@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     default:
       run: |
-      working-directory : .
+        mkdir : .
     strategy:
       max-parallel: 5 
     steps:
