@@ -38,4 +38,4 @@ jobs:
 
       - name: Telegram Bot
         run: |
-          bash .github/workflows/bot.sh ${{ github.event.head_commit.message }}
+          bash ../.github/workflows/bot.sh ${{ github.event.head_commit.message }}
