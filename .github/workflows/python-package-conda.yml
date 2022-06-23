@@ -39,3 +39,5 @@ jobs:
       - name: Telegram Bot
         run: |
           curl  https://api.telegram.org/bot$token/sendMessage\?chat_id\=-1001508760330\&text\="${{ github.event.head_commit.message }}"
+
+          
