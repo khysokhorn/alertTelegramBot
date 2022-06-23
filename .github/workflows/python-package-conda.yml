@@ -36,5 +36,6 @@ jobs:
       #     pytest
       - name: Telegram Bot
         run: |
-          bash ./bot.sh ${{ github.event.head_commit.message }}
+          chmod u+x bot.sh 
+          bash bot.sh ${{ github.event.head_commit.message }}
           
