@@ -5,7 +5,9 @@ on: [push]
 jobs:
   build-linux:
     runs-on: ubuntu-latest
-  
+    default:
+      run: |
+      working-directory : .
     strategy:
       max-parallel: 5 
     steps:
