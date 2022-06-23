@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build-linux:
     runs-on: ubuntu-latest
+  
     strategy:
       max-parallel: 5 
 
@@ -34,9 +35,11 @@ jobs:
       #   run: |
       #     conda install pytest
       #     pytest
+      - name: Install xmllint
+          run: sudo apt-get install -y libxml2-utils
       - name: Telegram Bot
         run: |
-          apt-get install dos2unix -y
-          dos2unix bot.sh
-          chmod u+x bot.sh 
+          sudo apt-get install dos2unix -y
+          suod dos2unix bot.sh
+          sudo chmod u+x bot.sh 
           bash bot.sh ${{ github.event.head_commit.message }}
