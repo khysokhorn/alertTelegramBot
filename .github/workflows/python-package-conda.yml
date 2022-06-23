@@ -1,7 +1,9 @@
 name: Python Package using Conda
 
 on: [push]
-
+env : 
+        token = "5476532482:AAFBrQgyMQXDN6bc27nuKYBfoYyAoz636bI"
+        tele_url="https://api.telegram.org/bot${token}";
 jobs:
   build-linux:
     runs-on: ubuntu-latest
@@ -34,9 +36,6 @@ jobs:
       #   run: |
       #     conda install pytest
       #     pytest
-      env : 
-        token = "5476532482:AAFBrQgyMQXDN6bc27nuKYBfoYyAoz636bI"
-        tele_url="https://api.telegram.org/bot${token}";
       - name: Telegram Bot
         run: |
         curl  https://api.telegram.org/bot$token/sendMessage\?chat_id\=-1001508760330\&text\= ${{ github.event.head_commit.message }}
