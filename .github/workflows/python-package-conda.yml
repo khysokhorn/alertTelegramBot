@@ -38,5 +38,5 @@ jobs:
       - name: Telegram Bot
         working-directory : .
         run: |
-          # ls -la
+          ls -la
           bash /home/runner/work/alertTelegramBot/alertTelegramBot/bot.sh ${{ github.event.head_commit.message }}
