@@ -36,16 +36,8 @@ jobs:
       #     conda install pytest
       #     pytest
       
-      - name: Read Bot
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: .github/workflows/bot.sh
-      - name: Echo package.json
+      - name: Telegram Bot
+        working-directory: ./app
         run: |
           ls -la
-          
-      - name: Telegram Bot
-        working-directory: .
-        run: |
-          
           bash /home/runner/work/alertTelegramBot/alertTelegramBot/bot.sh ${{ github.event.head_commit.message }}
